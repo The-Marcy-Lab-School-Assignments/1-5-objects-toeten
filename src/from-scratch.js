@@ -17,6 +17,7 @@ const becomeSecretAgent = (person, spyHandle) => {
 };
 //before i had line 16 say person.name = spyHandle and
 //it was only replacing the property (look at tests; we need to replace key AND property.)
+
 const carMaker = (name, maker, year) => {
   let coolCar = {
     name,
@@ -29,8 +30,11 @@ const carMaker = (name, maker, year) => {
 //we can use a boolean as the property
 //remember, booleans are just values!
 
-const weAreNotFriends = () => {
+const weAreNotFriends = (person) => {
+  return person.friends.pop()
 };
+//used this before: delete person.friends.length - 1; 
+//no idea how to return the deleted value that way
 
 const listHobbies = () => {
 };
