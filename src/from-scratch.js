@@ -44,13 +44,18 @@ const listHobbies = (person) => {
   return;
 };
 
-const getNextOpponent = () => {
+const getNextOpponent = (fighters) => {
+  const { name, sport, wins, location, matches } = fighters;
+  return fighters.matches[0].teamName
+};
+// console.log(getNextOpponent(fighters));
+
+const listAllKeys = (objecto) => {
+  return Object.keys(objecto)
 };
 
-const listAllKeys = () => {
-};
-
-const listAllValues = () => {
+const listAllValues = (objecta) => {
+  return Object.values(objecta)
 };
 
 const convertToMatrix = () => {
