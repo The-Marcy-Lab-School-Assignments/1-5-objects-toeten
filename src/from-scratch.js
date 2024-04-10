@@ -36,7 +36,12 @@ const weAreNotFriends = (person) => {
 //used this before: delete person.friends.length - 1; 
 //no idea how to return the deleted value that way
 
-const listHobbies = () => {
+const listHobbies = (person) => {
+  const { name, age, hobbies } = person
+  for (let i = 0; i < person.hobbies.length; i++) {
+    console.log(`${name} likes ${person.hobbies[i]}.`);
+  }
+  return;
 };
 
 const getNextOpponent = () => {
