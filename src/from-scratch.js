@@ -17,8 +17,17 @@ const becomeSecretAgent = (person, spyHandle) => {
 };
 //before i had line 16 say person.name = spyHandle and
 //it was only replacing the property (look at tests; we need to replace key AND property.)
-const carMaker = () => {
+const carMaker = (name, maker, year) => {
+  let coolCar = {
+    name,
+    year,
+    maker,
+    needsOilChange: false
+  }
+  return coolCar
 };
+//we can use a boolean as the property
+//remember, booleans are just values!
 
 const weAreNotFriends = () => {
 };
