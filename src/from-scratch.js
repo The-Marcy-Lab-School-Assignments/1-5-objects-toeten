@@ -11,9 +11,12 @@ const haveBirthday = (person) => {
   person.age += 1
 };
 
-const becomeSecretAgent = () => {
+const becomeSecretAgent = (person, spyHandle) => {
+  delete person.name;
+  person.spyHandle = spyHandle;
 };
-
+//before i had line 16 say person.name = spyHandle and
+//it was only replacing the property (look at tests; we need to replace key AND property.)
 const carMaker = () => {
 };
 
