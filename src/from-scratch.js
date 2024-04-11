@@ -1,5 +1,5 @@
 const coolGreeting = (person) => {
-  const { name, bio, age, isCool } = person
+  const { name } = person
   if (person.isCool === true) {
     return `What is UP ${name.toUpperCase()}? How you been doin'?`
   } else {
@@ -45,8 +45,11 @@ const listHobbies = (person) => {
 };
 
 const getNextOpponent = (fighters) => {
-  const { name, sport, wins, location, matches } = fighters;
-  return fighters.matches[0].teamName
+  if (fighters.matches.length === 0) {
+    return null;
+  }
+  const { matches } = fighters;
+  return matches[0].teamName
 };
 // console.log(getNextOpponent(fighters));
 
