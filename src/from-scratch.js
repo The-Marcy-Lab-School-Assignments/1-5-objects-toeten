@@ -58,8 +58,13 @@ const listAllValues = (objecta) => {
   return Object.values(objecta)
 };
 
-const convertToMatrix = () => {
-};
+const convertToMatrix = (arrOfObj) => {
+  if (arrOfObj.length === 0) {
+    return [];
+  }
+  const keys = Object.keys(arrOfObj[0])
+  return [keys, ...arrOfObj.map(obj => keys.map(key => obj[key]))]
+}
 
 module.exports = {
   coolGreeting,

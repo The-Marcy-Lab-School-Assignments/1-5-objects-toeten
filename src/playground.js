@@ -43,3 +43,9 @@ console.log(getNextOpponent(fighters));
 }
 console.log(getNextOpponent(fighters)); */
 
+
+
+/* const convertToMatrix = (arrOfObj) => {
+  return arrOfObj.map(obj => Object.entries(obj));
+} */
+
